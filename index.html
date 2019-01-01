@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset=utf-8>
+        <title>Testing connection to Thingy52</title>
+<style>
+body { margin: 0; background: black; transition: background .1s; }
+body.invincible { background: #300; }
+.connected #btn { display: none }
+#canvas { display: none }
+.connected #canvas {
+    display: block;
+}
+#you {
+    position: absolute;
+    top: calc(50% - 5px);
+    left: calc(50% - 10px);
+    width: 20px;
+    height: 10px;
+    background: #fe0;
+    border-radius: 10px 5px 5px 10px;
+    box-shadow: 0 0 5px rgba(255, 255, 0, .3), 0 0 30px white;
+    transition: transform .1s;
+}
+.invincible #you {
+    background: orange;
+}
+.up-left {
+    color: white;
+    position: absolute;
+    top: 0;
+    right: 5px;
+    font-size: 24px;
+    font-family: monospace;
+}
+#lives {
+    color: red;
+    margin-right: 10px;
+}
+</style>
+    </head>
+    <body>
+        <button id=btn>Connect Thingy:52</button>
+        <canvas id=canvas></canvas>
+        <div id=you></div>
+        <div class=up-left>
+            <span id=lives>&hearts;&hearts;&hearts;&hearts;&hearts;</span>
+            <span id=points>0</span>
+        </div>
+    </body>
+    <script src=app.js></script>
+</html>
